@@ -1,7 +1,7 @@
 public class Calculator {
     public Double calculate(double a, String operation, double b) {
         Operations o = Operations.getValue(operation);
-        if (o == null||b==0) {
+        if (o == null || b == 0) {
             return -1.0;
         }
         switch (o) {
