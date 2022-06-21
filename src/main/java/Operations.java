@@ -9,12 +9,12 @@ public enum Operations {
         this.operation = operation;
     }
 
-    public static Operations getValue(String oper) {
+    public static Operations getValue(String oper) throws NullPointerException {
         for (Operations e : values()) {
             if (e.operation.equals(oper)) {
                 return e;
             }
         }
-        return null;
+        throw new UnsupportedOperationException("Operation " + oper + " is not supported");
     }
 }
