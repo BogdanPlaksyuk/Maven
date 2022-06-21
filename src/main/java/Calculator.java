@@ -5,6 +5,7 @@ public class Calculator {
             Double.parseDouble(a);
             Double.parseDouble(b);
         } catch (NumberFormatException e) {
+            System.err.println("Not numeric");
             throw new CalculatorException("Not numeric");
         }
 
