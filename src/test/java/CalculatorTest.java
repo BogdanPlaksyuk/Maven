@@ -68,10 +68,10 @@ public class CalculatorTest {
         calculator = new Calculator();
         assertThrows(UnsupportedOperationException.class, () -> calculator.calculate("4.0", "%", "0.0"));
     }
+
     @Test
     public void calculateNotNumeric() {
         calculator = new Calculator();
-        String actual = calculator.calculate("df", "+", "fd");
-        Assert.assertNull(actual);
+        assertThrows(CalculatorException.class, () -> calculator.calculate("dsd", "+", "dsdcx"));
     }
 }
